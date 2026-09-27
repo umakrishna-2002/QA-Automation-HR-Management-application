@@ -15,7 +15,7 @@ test.describe('Download Payroll Report', () => {
         await dashboard.navigate();
         await  dashboard.goToReports();
         await expect(page).toHaveURL('/reports.html');
-        
+
 
         // defining target save path for the downloaded file
         const targetPath = path.join(__dirname, '../downloads/payroll_report.csv');
@@ -26,6 +26,4 @@ test.describe('Download Payroll Report', () => {
       expect(download.suggestedFilename()).toContain('payroll_report');
     expect(download.suggestedFilename().endsWith('.csv')).toBeTruthy();
   });
-}); 
-
-
+});
