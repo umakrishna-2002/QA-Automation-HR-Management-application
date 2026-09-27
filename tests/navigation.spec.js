@@ -22,6 +22,6 @@ test.describe('Multi-Tab Navigation Suite', () => {
 
     // Close the second tab and return to main tab
     await newPage.close();
-    await expect(page).toHaveURL(/\/dashboard\.html/);
+    await expect(page).toHaveURL(/.*dashboard\.html/);
   });
 });
